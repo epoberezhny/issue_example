@@ -1,0 +1,10 @@
+version: '3.6'
+
+services:
+  app:
+    image: ruby:2.6
+    working_dir: /srv/app
+    network_mode: bridge
+    volumes:
+      - .:/srv/app:cached
+      - ./file_1.example.txt:/srv/app/file_1.txt:cached
